@@ -1,0 +1,31 @@
+$falu-red: #772014ff;
+$bistre: #3f220fff;
+$smoky-black: #19180aff;
+$caramel: #dc7f38ff;
+$ultra-violet: #50537aff;
+
+$body-bg: #212529;
+$body-color: #FFF;
+$primary: $caramel;
+$secondary: $ultra-violet;
+
+$box-shadow-lg: 0 1rem 3rem rgba(black, .5);
+
+@import "bootstrap/scss/bootstrap";
+
+.my-navbar {
+    @extend .navbar;
+    @extend .navbar-expand-lg;
+    @extend .navbar-dark;
+    @extend .bg-secondary;
+}
+
+.text-emphasis-1 {
+    @extend .text-primary;
+    @extend .fw-bold;
+    text-shadow: .25rem .25rem .5rem rgba($secondary, .5);
+}
+
+#home-hero {
+    min-height: 40svh;
+}

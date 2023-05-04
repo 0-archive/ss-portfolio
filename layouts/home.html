@@ -1,9 +1,9 @@
 {{ define "main" }}
     {{"<!-- layouts/home.html -->" | safeHTML }}
-    <section class="text-light py-2 d-flex flex-column justify-content-center" id="home-hero">
+    <section class="py-2 d-flex flex-column justify-content-center" id="home-hero">
         <div class="container d-md-flex">
             <div class="container d-flex flex-column justify-content-center">
-                <h1 class="text-md-end text-center">How can your business <span class="text-primary">stand out</span> online?</h1>
+                <h1 class="text-md-end text-center">How can <span class="text-emphasis-1">your business</span> stand out online?</h1>
                 <div class="container-fluid d-flex justify-content-center">
                     <a href="/" class="btn btn-primary my-md-4 my-2">Request your free consultation</a>
                 </div>
@@ -13,7 +13,7 @@
             </div>
         </div>
     </section>
-    <section class="bg-secondary-subtle py-2">
+    <section class="py-2">
         <div class="container">
             <h2>My portfolio</h2>
             <div class="carousel"></div>
@@ -21,8 +21,15 @@
     </section>
     <section class="py-2">
         <div class="container">
-            <h2>Who am I?</h2>
-            <img src="" alt="Steven Schaefer">
+            <div class="container-fluid d-flex justify-content-around align-items-center">
+                <h2 class="mx-3">Who am I?</h2>
+                {{ $profileImg := resources.GetMatch "images/linkedin-01.webp" }}
+                {{ $profileImg := $profileImg.Resize "400x400" }}
+                <img class="rounded-circle shadow-lg" 
+                    src="{{ $profileImg.RelPermalink }}" 
+                    alt="Steven Schaefer"
+                >
+            </div>
             <p>My name is Steven Schaefer, I am a full-stack web developer. I like to bring a creative spin to every project I work on. I have a passion for technology and try to make the world a better place with it.</p>
         </div>
     </section>
